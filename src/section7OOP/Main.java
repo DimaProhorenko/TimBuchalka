@@ -16,9 +16,20 @@ public class Main {
 //		System.out.println(acc);
 		
 //		Customer challenge
-		Customer c = new Customer();
-		Customer me = new Customer("Dima", 1000, "dima@gmail.com");
-		System.out.println(me);
+//		Customer c = new Customer();
+//		Customer me = new Customer("Dima", 1000, "dima@gmail.com");
+//		System.out.println(me);
+		
+//		Records
+//		Student a = new Student(0, "Dima", "06.02.2000", "Java Masterclass, Hillel java basic");
+//		System.out.println(a);
+//		
+//		System.out.println(a.dateOfBirth());
+		
+		Point a = new Point(6, 5);
+		Point b = new Point(3, 1);
+		
+		System.out.println(a.distance(b));
 	}
 
 }
