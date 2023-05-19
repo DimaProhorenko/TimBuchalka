@@ -2,14 +2,10 @@ package encapsulation;
 
 public class Main {
 	public static void main(String[] args) {
-		Player p = new Player();
-		p.name = "Tim";
-		p.health = 20;
-		p.weapon = "sword";
-		
-		int damage = 10;
-		p.looseHealth(damage);
-		p.looseHealth(12);
-		System.out.println("REMAINING HEALTH: " + p.healthRemaining());
+		Printer p = new Printer(50, true);
+		System.out.println("Initial page count = " + p.getPagesPrinted());
+		int pagesPrinted = p.printPages(5);
+		p.printPages(20);
+		System.out.printf("Current job pages: %s, total pages printed %s %n", pagesPrinted, p.getPagesPrinted());
 	}
 }
