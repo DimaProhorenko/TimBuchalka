@@ -40,11 +40,22 @@ public class Challenge1 {
 		return result;
 	}
 	
+	public int[] reverse(int[] arr) {
+		int[] rs = new int[arr.length];
+		int[] a = Arrays.copyOf(arr, arr.length);
+		
+		for(int i = arr.length-1, j=0; i >= 0; i--, j++) {
+			rs[j] = arr[i];
+		}
+		
+		return rs;
+	}
+	
 	public static void main(String[] args) {
 		Challenge1 c = new Challenge1();
 		int[] arr = c.generateRandomArray(10);
 		int[] userArr = c.readIntegers();
-		System.out.println("Array" + Arrays.toString(userArr));
+		System.out.println("Array" + Arrays.toString(c.reverse(userArr)));
 		System.out.println(c.findMin(userArr));
 	}
 }
